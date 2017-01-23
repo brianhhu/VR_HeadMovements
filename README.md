@@ -22,20 +22,20 @@ The set of natural images used in the experiment can be found in the **images** 
 
 ### Raw Head Movement Data
 
-The raw head movement data is contained in the **data** directory. Each subfolder in the directory is named by subject (N = 27 subjects, subject 0 through subject 26). In each subject folder, there are various files containing information related to the raw head movements for that subject. The important files are:
+The raw head movement data is contained in the **data** directory. Each subfolder in the directory is named by subject (N = 27 subjects, subject 0 through subject 26). In each subject folder, there are various files containing information related to the raw head movement data for that subject. The important files are:
 
 * imageList.txt
   * This file contains the order in which images were presented to the subject. Images from each category were presented in a pseudo-random order. Five repeat images were presented at the end of the experiment.
 * tutorial.csv
   * This file contains the raw head movement traces during the initial calibration tutorial, where subjects had to orient their heads to nine different targets within a fixed grid. The columns are "Time" (timestamp in milliseconds), "X" (X-position of the head mapped onto a 640x480 image), "Y" (Y-position of the head mapped onto a 640x480 image), and "Event" (a "1" indicates whenever the subject succesfully moved their head to one of the targets).
 * image(*image_id*)data.csv
-  * These files contain the raw head movement traces during each image presentation. *image_id* corresponds to the image number of the presented scene (see Natural Image Dataset section above). If the image was a repeat image, then "repeated" is appended to the filename, i.e. image(*image_id*)data_repeated.csv. The columns are "Time" (timestamp in milliseconds), "Intersection (X)" (X-position of the head mapped onto a 640x480 image), "Intersection (Y)" (Y-position of the head mapped onto a 640x480 image). We do not use the last two columns, "Angle (X and Y)," as these are the visual angles corresponding to the recorded head positions.
+  * These files contain the raw head movement traces during each image presentation. *image_id* corresponds to the image number of the presented scene (see Natural Image Dataset section above). If the image was a repeat image, then "repeated" is appended to the filename, i.e. image(*image_id*)data_repeated.csv. The columns are "Time" (timestamp in milliseconds), "Intersection (X)" (X-position of the head mapped onto a 640x480 image), "Intersection (Y)" (Y-position of the head mapped onto a 640x480 image). We do not use the last two columns, "Angle (X and Y)," which are the visual angles corresponding to the recorded head positions.
 * *.WMA
   * These files correspond to audio recordings made during the experiments. Subjects were asked to verbally describe in one sentence what they remembered about a scene after each image presentation. As a fair warning, these files are not well-annotated, so it may be difficult to extract meaningful information from them.
 
 ### Post-Processing
 
-We also include our post-processing code (**post_process.m** and **analyze_csv.m**), which were used to generate the data and figures used in our paper. These post-processing routines create a structure named "results", which is saved as **results.mat**. The "results" structure contains the head movement data organized by subject, image category, and image presentation number. For example, to get head movement data for the sixth subject viewing the second image category ("fractals") on the fifth image presentation, use the following: results(6).cat(2).image(5). The important returned metrics are:
+We also include our post-processing code (**post_process.m** and **analyze_csv.m**), which were used to generate the data and figures used in our paper. These post-processing routines create a structure named "results", which is saved as **results.mat**. The "results" structure contains the head movement data organized by subject, image category, and image presentation number. For example, to get head movement data for the sixth subject viewing the second image category ("fractals") on the fifth image presentation, use the following command: results(6).cat(2).image(5). This will return several important metrics:
 
 * *pos_interp* (interpolated X/Y head movement trace)
 * *fix_location* (location of head "fixations" in X/Y pixel coordinates)
@@ -46,7 +46,7 @@ We also include our post-processing code (**post_process.m** and **analyze_csv.m
 * *ang_vel_mag* (head velocity magnitude)
 * *ang_vel_dir* (head velocity angle)
 
-Please refer to the paper and **analyze_csv.m** for more details about how these metrics were calculated.
+Please refer to the paper and **analyze_csv.m** for more details on how these metrics were calculated.
 
 ### Miscellaneous
 
