@@ -74,12 +74,13 @@ if isempty(time_onset)
     
     % We look at the following metrics: movement duration, movement amplitude, movement peak velocity,
     % movement angle, fixation duration, and fixation location
-    results.mvt_duration = [];
-    results.mvt_amplitude = [];
-    results.mvt_peakvel = [];
-    results.mvt_angle = [];
-    results.fix_duration = time_new(end);
-    results.fix_location = mean(results.pos_interp);
+    % NOTE: Movements and "fixations" were defined by using a velocity threshold of 25 deg/s
+    results.mvt_duration = []; % duration of head movement (time_offset-time_onset)
+    results.mvt_amplitude = []; % amplitude of head movement (based on head position at end points of movement)
+    results.mvt_peakvel = []; % peak velocity during head movement
+    results.mvt_angle = []; % angle of head movement (based on head position at end points of movement)
+    results.fix_duration = time_new(end); % duration of head "fixation" (time_offset_fix-time_onset_fix)
+    results.fix_location = mean(results.pos_interp); % X/Y coordinates (in pixels) of head "fixations"
     
 else
     

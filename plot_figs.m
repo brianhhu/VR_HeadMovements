@@ -32,7 +32,6 @@ for i = 1:length(results)
         mvt_temp = vertcat(results(i).cat(j).image.mvt_amplitude);
         peak_temp = vertcat(results(i).cat(j).image.mvt_peakvel);
         dur_temp = vertcat(results(i).cat(j).image.mvt_duration);
-        fix_temp = vertcat(results(i).cat(j).image.fix_duration);
         
         mvt_amp = [mvt_amp; mvt_temp];
         mvt_peak = [mvt_peak; peak_temp];
