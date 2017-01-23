@@ -12,6 +12,7 @@ The program is written in MATLAB (Mathworks). The code is known to run on R2014a
     Year                     = {2017},
     Address                  = {Baltimore, MD},
     Organization             = {IEEE Information Theory Society},
+    Pages                    = {1-6},
     }
 
 
