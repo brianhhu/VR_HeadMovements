@@ -3,7 +3,7 @@ Project code and data associated with Hu_etal '17 CISS paper on head movements i
 
 ### Introduction
 
-The program is written in MATLAB (Mathworks). The code is known to run on R2014a, but should also be compatible with other versions. The main program function is **plot_figs.m**. Running this program will generate the figures shown in the paper. For more details about the experiment or if you plan on using the data, please cite:
+The program is written in MATLAB (Mathworks). The code is known to run on R2014a, but should also be compatible with other versions. The main program function is **plot_figs.m**. Running this program will generate the figures shown in the paper. If you found the paper helpful or plan on using the associated code/data, please consider citing:
 
     @InProceedings{Hu_etal17a,
     Title                    = {Head movements during visual exploration of natural images in virtual reality},
@@ -28,13 +28,23 @@ The raw head movement data is contained in the **data** directory. Each subfolde
 * tutorial.csv
   * This file contains the raw head movement traces during the initial calibration tutorial, where subjects had to orient their heads to nine different targets within a fixed grid. The columns are "Time" (timestamp in milliseconds), "X" (X-position of the head mapped onto a 640x480 image), "Y" (Y-position of the head mapped onto a 640x480 image), and "Event" (a "1" indicates whenever the subject succesfully moved their head to one of the targets).
 * image(*image_id*)data.csv
-  * These files contain the raw head movement traces during each image presentation. (*image_id*) corresponds to the image number of the presented scene (see Natural Image Dataset section above). If the image was a repeat image, then "repeated" is appended to the filename, i.e. image(*image_id*)data_repeated.csv. The columns are "Time" (timestamp in milliseconds), "Intersection (X)" (X-position of the head mapped onto a 640x480 image), "Intersection (Y)" (Y-position of the head mapped onto a 640x480 image). We do not use the last two columns, "Angle (X and Y)," as these are the visual angles corresponding to the recorded head positions.
+  * These files contain the raw head movement traces during each image presentation. *image_id* corresponds to the image number of the presented scene (see Natural Image Dataset section above). If the image was a repeat image, then "repeated" is appended to the filename, i.e. image(*image_id*)data_repeated.csv. The columns are "Time" (timestamp in milliseconds), "Intersection (X)" (X-position of the head mapped onto a 640x480 image), "Intersection (Y)" (Y-position of the head mapped onto a 640x480 image). We do not use the last two columns, "Angle (X and Y)," as these are the visual angles corresponding to the recorded head positions.
 * *.WMA
   * These files correspond to audio recordings made during the experiments. Subjects were asked to verbally describe in one sentence what they remembered about a scene after each image presentation. As a fair warning, these files are not well-annotated, so it may be difficult to extract meaningful information from them.
 
 ### Post-Processing
 
-We also include our post-processing code (**post_process.m** and **analyze_csv.m**), which we used to generate the data and figures used in our paper. These post-processing routines create a structure named "results", which is saved as **results.mat**. The "results" structure contains the head movement data organized by subject, image category, and image presentation number. For example, to get head movement data for the sixth subject viewing the second image category ("fractals") on the fifth image presentation, use the following: results(6).cat(2).image(5). The important metrics are: *pos_interp* (interpolated X/Y head movement trace), *ang_vel_mag* (head velocity magnitude), *ang_vel_dir* (head velocity angle), *mvt_duration* (movement duration), *mvt_amplitude* (movement amplitude), *mvt_peakvel* (movement peak velocity), and *mvt_angle* (movement angle). Please refer to **analyze_csv.m** for more details.
+We also include our post-processing code (**post_process.m** and **analyze_csv.m**), which we used to generate the data and figures used in our paper. These post-processing routines create a structure named "results", which is saved as **results.mat**. The "results" structure contains the head movement data organized by subject, image category, and image presentation number. For example, to get head movement data for the sixth subject viewing the second image category ("fractals") on the fifth image presentation, use the following: results(6).cat(2).image(5). The important metrics are:
+
+* *pos_interp* (interpolated X/Y head movement trace)
+* *ang_vel_mag* (head velocity magnitude)
+* *ang_vel_dir* (head velocity angle)
+* *mvt_duration* (head movement duration)
+* *mvt_amplitude* (head movement amplitude)
+* *mvt_peakvel* (head movement peak velocity)
+* *mvt_angle* (head movement angle). 
+
+Please refer to **analyze_csv.m** for more details about how these metrics were calculated.
 
 ### Miscellaneous
 
