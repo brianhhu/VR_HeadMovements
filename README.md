@@ -1,4 +1,4 @@
-# VR Head Movements
+# Head Movements in Virtual Reality
 Project code and data associated with Hu_etal '17 CISS paper on head movements in virtual reality
 
 ### Introduction
