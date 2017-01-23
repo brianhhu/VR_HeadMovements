@@ -35,7 +35,7 @@ The raw head movement data is contained in the **data** directory. Each subfolde
 
 ### Post-Processing
 
-We also include our post-processing code (**post_process.m** and **analyze_csv.m**), which were used to generate the data and figures used in our paper. These post-processing routines create a structure named "results", which is saved as **results.mat**. The "results" structure contains the head movement data organized by subject, image category, and image presentation number. For example, to get head movement data for the sixth subject viewing the second image category ("fractals") on the fifth image presentation, use the following command: results(6).cat(2).image(5). This will return several important metrics:
+We also include our post-processing code (**post_process.m** and **analyze_csv.m**), which was used to generate the data and figures used in our paper. These post-processing routines create a structure named "results", which is saved as **results.mat**. The "results" structure contains the head movement data organized by subject, image category, and image presentation number. For example, to get head movement data for the sixth subject viewing the second image category ("fractals") on the fifth image presentation, use the following command: results(6).cat(2).image(5). This will return several important metrics:
 
 * *pos_interp* (interpolated X/Y head movement trace)
 * *fix_location* (location of head "fixations" in X/Y pixel coordinates)
@@ -46,7 +46,7 @@ We also include our post-processing code (**post_process.m** and **analyze_csv.m
 * *ang_vel_mag* (head velocity magnitude)
 * *ang_vel_dir* (head velocity angle)
 
-Please refer to the paper and **analyze_csv.m** for more details on how these metrics were calculated.
+Please refer to the paper and **analyze_csv.m** for more details on these metrics and how they were calculated.
 
 ### Miscellaneous
 
