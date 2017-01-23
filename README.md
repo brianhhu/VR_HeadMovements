@@ -45,7 +45,7 @@ We also include our post-processing code (**post_process.m** and **analyze_csv.m
 * *ang_vel_mag* (head velocity magnitude)
 * *ang_vel_dir* (head velocity angle)
 
-Please refer to **analyze_csv.m** for more details about how these metrics were calculated.
+Please refer to the paper and **analyze_csv.m** for more details about how these metrics were calculated.
 
 ### Miscellaneous
 
