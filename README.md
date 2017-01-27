@@ -21,7 +21,7 @@ The set of natural images used in the experiment can be found in the **images** 
 
     @Article{Parkhurst_etal02a,
     Title                    = {{M}odelling the role of salience in the allocation of visual selective attention},
-    Author                   = {Parkhurst, D. and Law, K. and Niebur, E.},
+    Author                   = {Parkhurst, Derrick and Law, Klinton and Niebur, Ernst},
     Journal                  = {Vision Research},
     Year                     = {2002},
     Number                   = {1},
@@ -31,7 +31,7 @@ The set of natural images used in the experiment can be found in the **images** 
     
     @Article{Masciocchi_etal09,
     Title                    = {{E}veryone knows what is interesting: {S}alient locations which should be fixated},
-    Author                   = {C. Masciocchi and S. Mihalas and D. Parkhurst and E. Niebur},
+    Author                   = {Masciocchi, Christopher M. and Mihalas, Stefan and Parkhurst, Derrick and Niebur, Ernst},
     Journal                  = {Journal of Vision},
     Year                     = {2009},
     Month                    = {October},
