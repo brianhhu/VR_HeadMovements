@@ -17,7 +17,7 @@ The program is written in MATLAB (Mathworks). The code is known to run on R2014a
 
 ### Natural Image Dataset
 
-The set of natural images used in the experiment can be found in the **images** directory. We used a total of 125 images, with 25 images from each of five categories: buildings (images 0-24), fractals (images 25-49), old home interiors (images 50-74), landscapes (images 75-99), and new home interiors (images 100-124). With the exception of the new home interiors, the images used in the other four categories are the same as those used in previous visual attention studies on eye fixations (Parkhurst et al, '02) and interest point selections (Masciocchi et al, '09). These references are given below:
+The set of natural images used in the experiment can be found in the **images** directory. We used a total of 125 images, with 25 images from each of five categories: buildings (images 0-24), fractals (images 25-49), old home interiors (images 50-74), landscapes (images 75-99), and new home interiors (images 100-124). With the exception of the new home interiors, the images used in the other four categories are a subset of those used in previous visual attention studies on eye fixations (Parkhurst et al, '02) and interest point selections (Masciocchi et al, '09). These references are given below:
 
     @Article{Parkhurst_etal02a,
     Title                    = {{M}odelling the role of salience in the allocation of visual selective attention},
