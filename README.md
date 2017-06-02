@@ -1,6 +1,10 @@
 # Head Movements in Virtual Reality
 Project code and data associated with Hu_etal '17 CISS paper on head movements in virtual reality
 
+<p align="center">
+  <img src="http://brianhhu.github.io/img/Fig_Head.png" alt="Sample head movements"/>
+</p>
+
 ### Introduction
 
 The program is written in MATLAB (Mathworks). The code is known to run on R2014a, but should also be compatible with other versions. The main program function is **plot_figs.m**. Running this program will generate the figures shown in the paper. If you use the associated code and/or data, please cite:
