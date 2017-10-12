@@ -10,13 +10,13 @@ Project code and data associated with Hu_etal '17 CISS paper on head movements i
 The program is written in MATLAB (Mathworks). The code is known to run on R2014a, but should also be compatible with other versions. The main program function is **plot_figs.m**. Running this program will generate the figures shown in the paper. If you use the associated code and/or data, please cite:
 
     @InProceedings{Hu_etal17a,
-    Title                    = {Head movements during visual exploration of natural images in virtual reality},
-    Author                   = {Hu, Brian and Johnson-Bey, Ishmael and Sharma, Mansi and Niebur, Ernst},
-    Booktitle                = {IEEE CISS-2017 51st Annual Conference on Information Sciences and Systems},
-    Year                     = {2017},
-    Address                  = {Baltimore, MD},
-    Organization             = {IEEE Information Theory Society},
-    Pages                    = {1-6},
+        Title                    = {Head movements during visual exploration of natural images in virtual reality},
+        Author                   = {Hu, Brian and Johnson-Bey, Ishmael and Sharma, Mansi and Niebur, Ernst},
+        Booktitle                = {IEEE CISS-2017 51st Annual Conference on Information Sciences and Systems},
+        Year                     = {2017},
+        Address                  = {Baltimore, MD},
+        Organization             = {IEEE Information Theory Society},
+        Pages                    = {1-6},
     }
 
 ### Natural Image Dataset
@@ -24,25 +24,25 @@ The program is written in MATLAB (Mathworks). The code is known to run on R2014a
 The set of natural images used in the experiment can be found in the **images** directory. We used a total of 125 images, with 25 images from each of five categories: buildings (images 0-24), fractals (images 25-49), old home interiors (images 50-74), landscapes (images 75-99), and new home interiors (images 100-124). With the exception of the new home interiors, the images used in the other four categories are a subset of those used in previous visual attention studies on eye fixations (Parkhurst et al, '02) and interest point selections (Masciocchi et al, '09). These references are given below:
 
     @Article{Parkhurst_etal02a,
-    Title                    = {{M}odelling the role of salience in the allocation of visual selective attention},
-    Author                   = {Parkhurst, Derrick and Law, Klinton and Niebur, Ernst},
-    Journal                  = {Vision Research},
-    Year                     = {2002},
-    Number                   = {1},
-    Pages                    = {107-123},
-    Volume                   = {42}
+        Title                    = {{M}odelling the role of salience in the allocation of visual selective attention},
+        Author                   = {Parkhurst, Derrick and Law, Klinton and Niebur, Ernst},
+        Journal                  = {Vision Research},
+        Year                     = {2002},
+        Number                   = {1},
+        Pages                    = {107-123},
+        Volume                   = {42}
     }
     
     @Article{Masciocchi_etal09,
-    Title                    = {{E}veryone knows what is interesting: {S}alient locations which should be fixated},
-    Author                   = {Masciocchi, Christopher M. and Mihalas, Stefan and Parkhurst, Derrick and Niebur, Ernst},
-    Journal                  = {Journal of Vision},
-    Year                     = {2009},
-    Month                    = {October},
-    Note                     = {PMC 2915572},
-    Number                   = {11},
-    Pages                    = {1-22},
-    Volume                   = {9}
+        Title                    = {{E}veryone knows what is interesting: {S}alient locations which should be fixated},
+        Author                   = {Masciocchi, Christopher M. and Mihalas, Stefan and Parkhurst, Derrick and Niebur, Ernst},
+        Journal                  = {Journal of Vision},
+        Year                     = {2009},
+        Month                    = {October},
+        Note                     = {PMC 2915572},
+        Number                   = {11},
+        Pages                    = {1-22},
+        Volume                   = {9}
     }
 
 ### Raw Head Movement Data
