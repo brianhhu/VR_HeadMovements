@@ -73,6 +73,27 @@ We also include our post-processing code (**post_process.m** and **analyze_csv.m
 
 Please refer to the paper and **analyze_csv.m** for more details on these metrics and how they were calculated.
 
+### Head Movement Saliency Analysis
+
+We also compared head movements with other measures of visual attention, including eye movements and interest point selections. We used the map comparison technique of Jeck et al, 2017 (see reference below):
+
+    @article{Jeck_etal17,
+        Title={Attentive pointing in natural scenes correlates with other measures of attention},
+        Author={Jeck, Daniel M and Qin, Michael and Egeth, Howard and Niebur, Ernst},
+        Journal={Vision Research},
+        Volume={135},
+        Pages={54--64},
+        Year={2017},
+        Publisher={Elsevier}
+    }
+    
+Code for the map comparison technique can be found in the **map-compare** submodule. Other analysis code can be found in the **saliency** directory. Since the smoothed maps were too large to include with this repository, they have to be generated from the raw data using **gen_maps.m**. For example, to create the smoothed head movement maps, run the following:
+ 
+     load('head_pts.mat');
+     gen_maps(head_points);
+     
+The same can be done for the fixation and interest point data. Be sure to change the name of the saved map accordingly at the bottom of the **gen_maps.m** function.
+
 ### Miscellaneous
 
 The **resources** directory contains the Hu_etal '17 CISS paper and conference presentation slides. If you have any questions about the code or the data, please feel free to contact me at bhu6 (AT) jhmi (DOT) edu.
