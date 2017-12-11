@@ -3,12 +3,13 @@ function maps = gen_maps(points)
 %% Generate heat maps from points
 sig = 27; %The standard deviation of the gaussian
 
-maps = cell(125,1);
+num_images = length(points);
+maps = cell(num_images,1);
 
 [X, Y] = meshgrid(-3*sig:3*sig,-3*sig:3*sig);
 gauss = 1*exp(-((X.^2)+(Y.^2))./(2*sig^2));
 
-for pic = 1:125
+for pic = 1:num_images
     maps{pic} = conv2(points{pic},gauss,'same');
 end
 
