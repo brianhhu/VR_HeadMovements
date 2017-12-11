@@ -1,0 +1,3 @@
+[submodule "map-compare"]
+	path = map-compare
+	url = https://github.com/dannyjeck/Attention-maps-comparison.git

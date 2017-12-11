@@ -11,6 +11,7 @@ im_id = 6;
 image_name = 'image06.gif';
 [im, cmap] = imread(['images/' image_name]);
 
+% head movement trajectory overlaid on image
 figure;
 imagesc(im)
 colormap(cmap)
@@ -20,6 +21,26 @@ plot(results(subj).cat(im_cat).image(im_id).fix_location(:,1),results(subj).cat(
 set(gcf,'Color','w')
 set(gca,'XTick',[])
 set(gca,'YTick',[])
+
+% head X-/Y-position
+figure;
+subplot(3,1,1)
+plot(0:0.02:10,results(subj).cat(im_cat).image(im_id).ang_interp(:,1),'LineWidth',2) 
+ylabel('X-Position (deg)')
+set(gca,'XTickLabel',[])
+subplot(3,1,2)
+plot(0:0.02:10,results(subj).cat(im_cat).image(im_id).ang_interp(:,2),'LineWidth',2) 
+ylabel('Y-Position (deg)')
+set(gca,'XTickLabel',[])
+
+% head velocity
+subplot(3,1,3)
+plot(0:0.02:10,results(subj).cat(im_cat).image(im_id).ang_vel_mag,'LineWidth',2) 
+hold on
+plot([0 10],[25 25],'r','Linewidth',2)
+ylabel('Velocity (deg/s)')
+xlabel('Time (s)')
+
 
 %% Figure 2: Plot the main sequence relationships between movement duration and movement amplitude/movement peak velocity.
 mvt_dur = [];
